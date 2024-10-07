@@ -1,0 +1,9 @@
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button {
+    padding: 16px 24px;
+}
