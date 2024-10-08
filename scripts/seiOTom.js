@@ -11,8 +11,8 @@ const tons = {
 const tom = (nota) => {
     if (nota == "c") {
         mostrarNotas.innerHTML = "C ,  D  ,  E ,  F ,  G  , A  ,  B";
-        toggle("c");
     }
+
     if (nota == "d") {
         mostrarNotas.innerHTML = "D , E , F# , G , A , B , C#";
     }

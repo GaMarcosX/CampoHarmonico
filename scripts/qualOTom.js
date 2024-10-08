@@ -23,7 +23,7 @@ const tom = (nota) => {
             notasBtnA.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnA.style.backgroundColor = "cornflowerblue";
+            notasBtnA.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -35,7 +35,7 @@ const tom = (nota) => {
             notasBtnAsus.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnAsus.style.backgroundColor = "cornflowerblue";
+            notasBtnAsus.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -48,7 +48,7 @@ const tom = (nota) => {
             notasBtnB.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnB.style.backgroundColor = "cornflowerblue";
+            notasBtnB.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -61,7 +61,7 @@ const tom = (nota) => {
             notasBtnC.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnC.style.backgroundColor = "cornflowerblue";
+            notasBtnC.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -74,7 +74,7 @@ const tom = (nota) => {
             notasBtnCsus.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnCsus.style.backgroundColor = "cornflowerblue";
+            notasBtnCsus.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -87,7 +87,7 @@ const tom = (nota) => {
             notasBtnD.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnD.style.backgroundColor = "cornflowerblue";
+            notasBtnD.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -100,7 +100,7 @@ const tom = (nota) => {
             notasBtnDsus.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnDsus.style.backgroundColor = "cornflowerblue";
+            notasBtnDsus.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -113,7 +113,7 @@ const tom = (nota) => {
             notasBtnE.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnE.style.backgroundColor = "cornflowerblue";
+            notasBtnE.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -126,7 +126,7 @@ const tom = (nota) => {
             notasBtnF.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnF.style.backgroundColor = "cornflowerblue";
+            notasBtnF.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -139,7 +139,7 @@ const tom = (nota) => {
             notasBtnFsus.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnFsus.style.backgroundColor = "cornflowerblue";
+            notasBtnFsus.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -152,7 +152,7 @@ const tom = (nota) => {
             notasBtnG.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnG.style.backgroundColor = "cornflowerblue";
+            notasBtnG.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;
@@ -165,7 +165,7 @@ const tom = (nota) => {
             notasBtnGsus.style.backgroundColor = "white";
         } else {
             notasSelecionadas.push(nota);
-            notasBtnGsus.style.backgroundColor = "cornflowerblue";
+            notasBtnGsus.style.backgroundColor = "#d3d3d3";
         }
         console.log(notasSelecionadas);
         mostrarNotas.innerHTML = notasSelecionadas;

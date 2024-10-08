@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Descobrir Tom</title>
+        <link rel="stylesheet" href="./styles/buttons.css" />
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/tom.css" />
+    </head>
+    <body>
+        <div class="text-box">
+            <a href="./home.html" class="btn btn-home">Home</a>
+        </div>
+        <h1>Possiveis tons:</h1>
+        <h2 id="possiveis">Digite para ver.</h2>
+
+        <div id="botões">
+            <button class="btn btn-home" id="notasBtnA" onclick="tom('a')">
+                A
+            </button>
+            <button class="btn btn-home" id="notasBtnAsus" onclick="tom('a#')">
+                A#
+            </button>
+            <button class="btn btn-home" id="notasBtnB" onclick="tom('b')">
+                B
+            </button>
+            <button class="btn btn-home" id="notasBtnC" onclick="tom('c')">
+                C
+            </button>
+            <button class="btn btn-home" id="notasBtnCsus" onclick="tom('c#')">
+                C#
+            </button>
+            <button class="btn btn-home" id="notasBtnD" onclick="tom('d')">
+                D
+            </button>
+            <button class="btn btn-home" id="notasBtnDsus" onclick="tom('d#')">
+                D#
+            </button>
+            <button class="btn btn-home" id="notasBtnE" onclick="tom('e')">
+                E
+            </button>
+            <button class="btn btn-home" id="notasBtnF" onclick="tom('f')">
+                F
+            </button>
+            <button class="btn btn-home" id="notasBtnFsus" onclick="tom('f#')">
+                F#
+            </button>
+            <button class="btn btn-home" id="notasBtnG" onclick="tom('g')">
+                G
+            </button>
+            <button class="btn btn-home" id="notasBtnGsus" onclick="tom('g#')">
+                G#
+            </button>
+        </div>
+        <h2 id="notas">...</h2>
+
+        <script src="./scripts/qualOTom.js"></script>
+        <script src="./scripts/default.js"></script>
+    </body>
+</html>

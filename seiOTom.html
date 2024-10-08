@@ -3,42 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/buttons.css" />
         <link rel="stylesheet" href="./styles/default.css" />
         <link rel="stylesheet" href="./styles/tom.css" />
 
         <title>Ja sei o Tom</title>
     </head>
     <body>
-        <a href="./home.html"><button>HOME</button></a>
+        <div class="text-box">
+            <a href="./home.html" class="btn btn-home">Home</a>
+        </div>
         <h1>Qual o tom?</h1>
         <div id="botões">
-            <button onclick="tom('a')">A</button>
-            <button onclick="tom('b')">B</button>
-            <button onclick="tom('c')">C</button>
-            <button onclick="tom('d')">D</button>
-            <button onclick="tom('e')">E</button>
-            <button onclick="tom('f')">F</button>
-            <button onclick="tom('g')">G</button>
+            <button class="btn btn-home" onclick="tom('a')">A</button>
+            <button class="btn btn-home" onclick="tom('b')">B</button>
+            <button class="btn btn-home" onclick="tom('c')">C</button>
+            <button class="btn btn-home" onclick="tom('d')">D</button>
+            <button class="btn btn-home" onclick="tom('e')">E</button>
+            <button class="btn btn-home" onclick="tom('f')">F</button>
+            <button class="btn btn-home" onclick="tom('g')">G</button>
         </div>
         <h1>Notas do tom</h1>
         <h2 id="mostrarNotas">...</h2>
 
         <script src="./scripts/seiOTom.js"></script>
-
-        <script>
-            function aoMudarResolucao() {
-                let largura = window.innerWidth;
-                let altura = window.innerHeight;
-
-                console.log(`A nova resolução é: ${largura}x${altura}`);
-
-                // Verifica se a resolução é 780x360
-
-                window.location.href = "braco.html";
-            }
-
-            // Adiciona o listener para o evento de redimensionamento
-            window.addEventListener("resize", aoMudarResolucao);
-        </script>
+        <script src="./scripts/default.js"></script>
     </body>
 </html>

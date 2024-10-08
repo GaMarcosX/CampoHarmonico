@@ -1,17 +1,21 @@
 * {
+    text-align: center;
+    font-size: 40px;
+
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+
     margin: 0;
     padding: 0;
+
     background-color: #56a3de;
     color: white;
 }
-button {
-    color: black;
-    background-color: white;
-    padding: 50px 24px;
-    border-radius: 16px;
-}
+
 #notas {
     text-transform: uppercase;
+}
+
+.header {
+    margin: 20px;
 }
