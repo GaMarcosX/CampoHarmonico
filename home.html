@@ -8,13 +8,32 @@
         <link rel="stylesheet" href="./styles/home.css" />
     </head>
     <body>
-        <h1>Bem Vindo seu App</h1>
-        <h3>O que deseja fazer?</h3>
-        <div id="botões">
-            <a href="./tom.html"> <button>Descobrir Tom</button></a>
-            <a href="./seiOTom.html"> <button>Notas do Tom</button></a>
-            <a href="./braco.html"> <button>Braço do Baixo</button></a>
-            <a href="./test.html">test</a>
+        <div id="imagem">
+            <h1>Bem Vindo seu App</h1>
+            <h3>O que deseja fazer?</h3>
+            <div id="botões">
+                <a href="./tom.html"> <button>Descobrir Tom</button></a>
+                <a href="./seiOTom.html"> <button>Notas do Tom</button></a>
+                <a href="./braco.html"> <button>Braço do Baixo</button></a>
+                <a href="./test.html">getResolution</a>
+            </div>
         </div>
+
+        <script>
+            function aoMudarResolucao() {
+                let largura = window.innerWidth;
+                let altura = window.innerHeight;
+
+                console.log(`A nova resolução é: ${largura}x${altura}`);
+
+                // Verifica se a resolução é 780x360
+                if (largura === 780 && altura === 360) {
+                    window.location.href = "braco.html";
+                }
+            }
+
+            // Adiciona o listener para o evento de redimensionamento
+            window.addEventListener("resize", aoMudarResolucao);
+        </script>
     </body>
 </html>
