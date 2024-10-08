@@ -3,9 +3,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: #56a3de;
+    color: white;
 }
 button {
+    color: black;
+    background-color: white;
     padding: 16px 24px;
+    border-radius: 16px;
 }
 #notas {
     text-transform: uppercase;

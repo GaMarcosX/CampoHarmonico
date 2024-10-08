@@ -4,18 +4,22 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles/default.css" />
-        <title>Notas</title>
+        <link rel="stylesheet" href="./styles/tom.css" />
+
+        <title>Ja sei o Tom</title>
     </head>
     <body>
-        <a href="./home.html">HOME</a>
+        <a href="./home.html"><button>HOME</button></a>
         <h1>Qual o tom?</h1>
-        <button onclick="tom('a')">A</button>
-        <button onclick="tom('b')">B</button>
-        <button onclick="tom('c')">C</button>
-        <button onclick="tom('d')">D</button>
-        <button onclick="tom('e')">E</button>
-        <button onclick="tom('f')">F</button>
-        <button onclick="tom('g')">G</button>
+        <div id="botões">
+            <button onclick="tom('a')">A</button>
+            <button onclick="tom('b')">B</button>
+            <button onclick="tom('c')">C</button>
+            <button onclick="tom('d')">D</button>
+            <button onclick="tom('e')">E</button>
+            <button onclick="tom('f')">F</button>
+            <button onclick="tom('g')">G</button>
+        </div>
         <h1>Notas do tom</h1>
         <h2 id="mostrarNotas">...</h2>
 

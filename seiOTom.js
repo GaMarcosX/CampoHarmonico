@@ -1,5 +1,3 @@
-const mostrarNotas = document.getElementById("mostrarNotas");
-
 const tons = {
     C: ["c", "d", "e", "f", "g", "a", "b"],
     D: ["d", "e", "f#", "g", "a", "b", "c#"],
@@ -13,6 +11,7 @@ const tons = {
 const tom = (nota) => {
     if (nota == "c") {
         mostrarNotas.innerHTML = "C ,  D  ,  E ,  F ,  G  , A  ,  B";
+        toggle("c");
     }
     if (nota == "d") {
         mostrarNotas.innerHTML = "D , E , F# , G , A , B , C#";
