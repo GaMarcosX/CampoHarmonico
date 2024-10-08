@@ -28,6 +28,7 @@
         <h2 id="notas">...</h2>
 
         <script src="./scripts/tom.js"></script>
+
         <script>
             function aoMudarResolucao() {
                 let largura = window.innerWidth;
@@ -36,9 +37,8 @@
                 console.log(`A nova resolução é: ${largura}x${altura}`);
 
                 // Verifica se a resolução é 780x360
-                if (largura === 780 && altura === 360) {
-                    window.location.href = "braco.html";
-                }
+
+                window.location.href = "braco.html";
             }
 
             // Adiciona o listener para o evento de redimensionamento
