@@ -7,6 +7,5 @@ button {
     cursor: pointer;
 }
 #botões {
-    border: dashed red;
     display: grid;
 }
