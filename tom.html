@@ -9,19 +9,24 @@
     <body>
         <a href="./home.html">HOME</a>
         <h1>Notas encontradas:</h1>
-        <button>A</button>
-        <button>A#</button>
-        <button>B</button>
-        <button>C</button>
-        <button>C#</button>
-        <button>D</button>
-        <button>D#</button>
-        <button>E</button>
-        <button>F</button>
-        <button>F#</button>
-        <button>G</button>
-        <button>G#</button>
-        <h2>Possiveis Tons da Música:</h2>
-        <h1></h1>
+        <button id="notasBtnA" onclick="tom('a')">A</button>
+        <button id="notasBtnAsus" onclick="tom('a#')">A#</button>
+        <button id="notasBtnB" onclick="tom('b')">B</button>
+        <button id="notasBtnC" onclick="tom('c')">C</button>
+        <button id="notasBtnCsus" onclick="tom('c#')">C#</button>
+        <button id="notasBtnD" onclick="tom('d')">D</button>
+        <button id="notasBtnDsus" onclick="tom('d#')">D#</button>
+        <button id="notasBtnE" onclick="tom('e')">E</button>
+        <button id="notasBtnF" onclick="tom('f')">F</button>
+        <button id="notasBtnFsus" onclick="tom('f#')">F#</button>
+        <button id="notasBtnG" onclick="tom('g')">G</button>
+        <button id="notasBtnGsus" onclick="tom('g#')">G#</button>
+        <h2>Notas selecionadas:</h2>
+        <h2 id="notas">...</h2>
+        <h1>Possiveis tons:</h1>
+        <h2 id="possiveis"></h2>
+        <input class="ch" type="checkbox" />
+
+        <script src="./tom.js"></script>
     </body>
 </html>
