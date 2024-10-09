@@ -17,5 +17,14 @@
 }
 
 .header {
+    margin: 90px;
+    margin-bottom: 50px;
+}
+
+h1 {
     margin: 20px;
+}
+
+#botões {
+    margin-top: 60px;
 }
