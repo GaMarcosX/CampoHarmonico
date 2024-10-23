@@ -15,46 +15,64 @@
         <h1>Possiveis tons:</h1>
         <h1 id="possiveis">Digite para ver.</h1>
 
+
         <div id="botões">
-            <button class="btn btn-home" id="notasBtnA" onclick="tom('a')">
+            <button class="btn btn-home" id="notasBtnA" onclick="mudacor('a')">
                 A
             </button>
-            <button class="btn btn-home" id="notasBtnAsus" onclick="tom('a#')">
+            <button
+                class="btn btn-home"
+                id="notasBtnAsus"
+                onclick="mudacor('a#')"
+            >
                 A#
             </button>
-            <button class="btn btn-home" id="notasBtnB" onclick="tom('b')">
+            <button class="btn btn-home" id="notasBtnB" onclick="mudacor('b')">
                 B
             </button>
-            <button class="btn btn-home" id="notasBtnC" onclick="tom('c')">
+            <button class="btn btn-home" id="notasBtnC" onclick="mudacor('c')">
                 C
             </button>
-            <button class="btn btn-home" id="notasBtnCsus" onclick="tom('c#')">
+            <button
+                class="btn btn-home"
+                id="notasBtnCsus"
+                onclick="mudacor('c#')"
+            >
                 C#
             </button>
-            <button class="btn btn-home" id="notasBtnD" onclick="tom('d')">
+            <button class="btn btn-home" id="notasBtnD" onclick="mudacor('d')">
                 D
             </button>
-            <button class="btn btn-home" id="notasBtnDsus" onclick="tom('d#')">
+            <button
+                class="btn btn-home"
+                id="notasBtnDsus"
+                onclick="mudacor('d#')"
+            >
                 D#
             </button>
-            <button class="btn btn-home" id="notasBtnE" onclick="tom('e')">
+            <button class="btn btn-home" id="notasBtnE" onclick="mudacor('e')">
                 E
             </button>
-            <button class="btn btn-home" id="notasBtnF" onclick="tom('f')">
+            <button class="btn btn-home" id="notasBtnF" onclick="mudacor('f')">
                 F
             </button>
-            <button class="btn btn-home" id="notasBtnFsus" onclick="tom('f#')">
+            <button
+                class="btn btn-home"
+                id="notasBtnFsus"
+                onclick="mudacor('f#')"
+            >
                 F#
             </button>
-            <button class="btn btn-home" id="notasBtnG" onclick="tom('g')">
+            <button class="btn btn-home" id="notasBtnG" onclick="mudacor('g')">
                 G
             </button>
             <button class="btn btn-home" id="notasBtnGsus" onclick="tom('g#')">
                 G#
             </button>
         </div>
-        <h2 id="notas">...</h2>
-
+        <h1>Notas selecionados:</h1>
+        <h1 id="escalaCompleta"></h1>
+  
         <script src="./scripts/qualOTom.js"></script>
         <script>
             function aoMudarResolucao() {
@@ -63,7 +81,6 @@
 
                 console.log(`A nova resolução é: ${largura}x${altura}`);
 
-                // Verifica se a resolução é 780x360
                 if (largura > altura) {
                     window.location.href = "braco.html";
                 }
