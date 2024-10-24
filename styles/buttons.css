@@ -7,8 +7,7 @@
 
     background-color: #ffffff;
     color: #000000;
-    margin: 0;
-    max-height: 80px;
+
 }
 .text-box {
     display: flex;
@@ -45,6 +44,7 @@
     background-color: #56a3de;
     color: #56a3de;
     border: none;
+    min-width: 150px;
     
 }
 .ver-home{
