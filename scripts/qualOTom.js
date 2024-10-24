@@ -108,13 +108,15 @@ const mudacor = (nota) => {
         possiveis(tons);
     }
     if (nota == "e") {
-        const jaTem = notasSelecionadas.indexOf(nota);
+         const jaTem = notasSelecionadas.indexOf(nota);
         if (jaTem > -1) {
             notasSelecionadas.splice(jaTem, 1);
             notasBtnE.style.backgroundColor = "white";
+      
         } else {
             notasSelecionadas.push(nota);
             notasBtnE.style.backgroundColor = "#818181";
+
         }
         possiveis(tons);
     }
@@ -183,8 +185,25 @@ const possiveis = (tons) => {
     // Exibe os tons que contêm todas as notas selecionadas
    // console.log("Tons válidos: ", tonsValidos);
     mostrarTonsValidos.innerHTML = tonsValidos.join(", ");
-    
-    
+
+    if(mostrarTonsValidos.innerHTML == ""){
+    mostrarTonsValidos.innerHTML = "Não encontrei o tom :(";
+    }
+
+
+    if(tonsValidos.length <= 4){
+            // Depois de ver os tons, mostra o botão
+            document.querySelector('.btn-ver-tons').style.backgroundColor = 'white';
+            document.querySelector('.btn-ver-tons').style.color = 'black';
+
+
+    }  else {
+        document.querySelector('.btn-ver-tons').style.backgroundColor = '#56a3de';
+        document.querySelector('.btn-ver-tons').style.color = '#56a3de';
+        
+
+    }
+
     
 };
 
@@ -200,3 +219,4 @@ const verTons = () =>{
     escalaCompleta.innerHTML += `<p>${tom}: ${escalaInteira}</p>`;
 });
     }}
+    

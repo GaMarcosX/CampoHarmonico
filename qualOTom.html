@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="./styles/tom.css" />
     </head>
     <body>
-        <h1>Possiveis tons:</h1>
         <h1 id="possiveis">Digite para ver.</h1>
 
         <div id="botões">
@@ -62,17 +61,18 @@
             <button class="btn btn-home" id="notasBtnG" onclick="mudacor('g')">
                 G
             </button>
-            <button class="btn btn-home" id="notasBtnGsus" onclick="tom('g#')">
+            <button class="btn btn-home" id="notasBtnGsus" onclick="mudacor('g#')">
                 G#
             </button>
-        </div>        
-        <button onclick="verTons()"
-        class="btn btn-home">Ver Tons</button>
+        </div>       
+        <div class="ver-home">
+            <a href="./home.html" class="btn btn-home">Home</a>
+            <p>se houverem 4 tons, você poderá ve-los inteiramente</p>
+            <button onclick="verTons()" class="btn btn-home btn-ver-tons">Ver Tons</button>       
+        </div>
 
         <h1 id="escalaCompleta"></h1>
-        <div class="text-box">
-            <a href="./home.html" class="btn btn-return">Home</a>
-        </div>
+
         <script src="./scripts/qualOTom.js"></script>
         <script>
             function aoMudarResolucao() {
@@ -88,6 +88,9 @@
 
             // Adiciona o listener para o evento de redimensionamento
             window.addEventListener("resize", aoMudarResolucao);
+
+
+
         </script>
     </body>
 </html>
