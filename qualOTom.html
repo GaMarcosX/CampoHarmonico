@@ -14,6 +14,9 @@
         </div>
         <h1>Possiveis tons:</h1>
         <h1 id="possiveis">Digite para ver.</h1>
+        
+        <button onclick="verTons()"
+        class="btn btn-home">Ver Tons</button>
 
 
         <div id="botões">
@@ -79,7 +82,7 @@
                 let largura = window.innerWidth;
                 let altura = window.innerHeight;
 
-                console.log(`A nova resolução é: ${largura}x${altura}`);
+                console.log('A nova resolução é: ${largura}x${altura}');
 
                 if (largura > altura) {
                     window.location.href = "braco.html";

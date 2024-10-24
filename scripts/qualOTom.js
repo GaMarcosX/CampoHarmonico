@@ -166,6 +166,7 @@ const mudacor = (nota) => {
 
 // Função para verificar quais tons contêm todas as notas selecionadas
 const possiveis = (tons) => {
+    escalaCompleta.innerHTML = ""
     tonsValidos.length = 0;
     // Percorre cada tom no objeto 'tons'
     for (const [tom, notas] of Object.entries(tons)) {
@@ -182,19 +183,20 @@ const possiveis = (tons) => {
     // Exibe os tons que contêm todas as notas selecionadas
    // console.log("Tons válidos: ", tonsValidos);
     mostrarTonsValidos.innerHTML = tonsValidos.join(", ");
-    const verTons = () =>{
-        tonsValidos.forEach((tom) => {
-            const escalaInteira = tons[tom]
-                .map((n) => n.toUpperCase())
-                .join(", ");
-            console.log(`${tom.toUpperCase()}: ${escalaInteira}`);
-            escalaCompleta.innerHTML += `<p>${tom.toUpperCase()}: ${escalaInteira}</p>`;
-        });
-    }
-    verTons()
+    
+    
     
 };
 
+const verTons = () =>{
+    escalaCompleta.innerHTML = ""
 
-
-
+        if (tonsValidos.length < 5){
+        tonsValidos.forEach((tom) => {
+    const escalaInteira = tons[tom]
+        .map((n) => n)
+        .join(", ");
+    console.log(`${tom}: ${escalaInteira}`);
+    escalaCompleta.innerHTML += `<p>${tom}: ${escalaInteira}</p>`;
+});
+    }}
