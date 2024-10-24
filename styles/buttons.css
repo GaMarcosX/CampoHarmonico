@@ -33,3 +33,7 @@
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
+
+.btn-return{
+    padding-inline: 10px;
+}

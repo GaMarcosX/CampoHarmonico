@@ -10,9 +10,7 @@
         <title>Ja sei o Tom</title>
     </head>
     <body>
-        <div class="text-box">
-            <a href="./home.html" class="btn btn-home">Home</a>
-        </div>
+
         <h1>Qual o tom?</h1>
         <h1 id="mostrarNotas">...</h2>
 
@@ -25,8 +23,10 @@
             <button class="btn btn-home" onclick="tom('f')">F</button>
             <button class="btn btn-home" onclick="tom('g')">G</button>
         </div>
-        <h1>Notas do Tom</h1>
 
+        <div class="text-box">
+            <a href="./home.html" class="btn btn-return">Home</a>
+        </div>
         <script src="./scripts/seiOTom.js"></script>
         <script>            function aoMudarResolucao() {
             let largura = window.innerWidth;

@@ -9,15 +9,8 @@
         <link rel="stylesheet" href="./styles/tom.css" />
     </head>
     <body>
-        <div class="text-box">
-            <a href="./home.html" class="btn btn-home">Home</a>
-        </div>
         <h1>Possiveis tons:</h1>
         <h1 id="possiveis">Digite para ver.</h1>
-        
-        <button onclick="verTons()"
-        class="btn btn-home">Ver Tons</button>
-
 
         <div id="botões">
             <button class="btn btn-home" id="notasBtnA" onclick="mudacor('a')">
@@ -72,10 +65,14 @@
             <button class="btn btn-home" id="notasBtnGsus" onclick="tom('g#')">
                 G#
             </button>
-        </div>
-        <h1>Notas selecionados:</h1>
+        </div>        
+        <button onclick="verTons()"
+        class="btn btn-home">Ver Tons</button>
+
         <h1 id="escalaCompleta"></h1>
-  
+        <div class="text-box">
+            <a href="./home.html" class="btn btn-return">Home</a>
+        </div>
         <script src="./scripts/qualOTom.js"></script>
         <script>
             function aoMudarResolucao() {
