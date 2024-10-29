@@ -19,11 +19,22 @@ let tonsValidos = [];
 
 const tons = {
     C: ["c", "d", "e", "f", "g", "a", "b"],
+    Csharp:["c#", "d#", "e#", "f#", "g#","a#", "b"],
+
     D: ["d", "e", "f#", "g", "a", "b", "c#"],
+    Dsharp: ["d#","f", "g", "g#", "a#", "c", "e"],
+
     E: ["e", "f#", "g#", "a", "b", "c#", "d#"],
+
     F: ["f", "g", "a", "a#", "c", "d", "e"],
+    Fsharp: ["f#", "g#", "a#", "b", "c#", "d#", "f",],
+
     G: ["g", "a", "b", "c", "d", "e", "f#"],
+    Gsharp: ["g#", "a#", "b", "c", "c#", "f", "g"],
+
     A: ["a", "b", "c#", "d", "e", "f#", "g#"],
+    Asharp: ["a#", "c","d","d#","f","g","a"],
+
     B: ["b", "c#", "d#", "e", "f#", "g#", "a#"],
 };
 
@@ -170,28 +181,60 @@ const mudacor = (nota) => {
 const possiveis = (tons) => {
     escalaCompleta.innerHTML = ""
     tonsValidos.length = 0;
+
     // Percorre cada tom no objeto 'tons'
     for (const [tom, notas] of Object.entries(tons)) {
         // Verifica se todas as notas selecionadas estão contidas nas notas do tom
-        const todasEstaoPresentes = notasSelecionadas.every((nota) =>
-            notas.includes(nota)
-        );
+        const todasEstaoPresentes = notasSelecionadas.every((nota) =>{
+            
+       
+        switch (nota) {
+            case "c#":
+                return notas.includes("c#");
+            case "d#":
+                return notas.includes("d#");
+            case "f#":
+                return notas.includes("f#");
+            case "g#":
+                return notas.includes("g#");
+            case "a#":
+                return notas.includes("a#");
+            default:
+                return notas.includes(nota);
+        }
+    });
 
         if (todasEstaoPresentes) {
             tonsValidos.push(tom); // Adiciona o tom à lista se todas as notas estiverem presentes
         }
     }
 
+    // Mapeando os tons válidos para a representação desejada
+    const tonsRepresentacao = tonsValidos.map(tom => {
+        switch (tom) {
+            case "Csharp": return "C#";
+            case "Dsharp": return "D#";
+            case "Fsharp": return "F#";
+            case "Gsharp": return "G#";
+            case "Asharp": return "A#";
+            default: return tom; // Retorna o tom como está se não for sustenido
+        }
+    });
+
+
     // Exibe os tons que contêm todas as notas selecionadas
-   // console.log("Tons válidos: ", tonsValidos);
-    mostrarTonsValidos.innerHTML = tonsValidos.join(", ");
+    mostrarTonsValidos.innerHTML = tonsRepresentacao.join(" | ");
+    if(mostrarTonsValidos.innerHTML == "C | C# | D | D# | E | F | F# | G | G# | A | A# | B"){
+        mostrarTonsValidos.innerHTML = "Digite para ver o Tom";
+        }
+    
 
     if(mostrarTonsValidos.innerHTML == ""){
     mostrarTonsValidos.innerHTML = "Não encontrei o tom :(";
     }
 
 
-    if(tonsValidos.length <= 4){
+    if(tonsValidos.length <= 8){
             // Depois de ver os tons, mostra o botão
             document.querySelector('.btn-ver-tons').style.backgroundColor = 'white';
             document.querySelector('.btn-ver-tons').style.color = 'black';
@@ -203,20 +246,29 @@ const possiveis = (tons) => {
         
 
     }
-
+  
     
 };
 
-const verTons = () =>{
-    escalaCompleta.innerHTML = ""
+const verTons = () => {
+    escalaCompleta.innerHTML = "";
 
-        if (tonsValidos.length < 5){
+    if (tonsValidos.length < 8 ) {
         tonsValidos.forEach((tom) => {
-    const escalaInteira = tons[tom]
-        .map((n) => n)
-        .join(", ");
-    console.log(`${tom}: ${escalaInteira}`);
-    escalaCompleta.innerHTML += `<p>${tom}: ${escalaInteira}</p>`;
-});
-    }}
-    
+            const escalaInteira = tons[tom].map((n) => n).join(", ");
+            // Mapeando os nomes dos tons para a representação desejada
+            const tomRepresentacao = (tom) => {
+                switch (tom) {
+                    case "Csharp": return "C#";
+                    case "Dsharp": return "D#";
+                    case "Fsharp": return "F#";
+                    case "Gsharp": return "G#";
+                    case "Asharp": return "A#";
+                    default: return tom; // Retorna o tom como está se não for sustenido
+                }
+            };
+            console.log(`${tomRepresentacao(tom)}: ${escalaInteira}`);
+            escalaCompleta.innerHTML += `<p>${tomRepresentacao(tom)}: ${escalaInteira}</p>`;
+        });
+    } 
+};
