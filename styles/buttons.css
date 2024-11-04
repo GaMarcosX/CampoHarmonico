@@ -1,60 +1,39 @@
 .btn {
-    text-decoration: none;
-    display: inline-block;
+  text-decoration: none;
+  border: none;
 
-    transition: all 0.2s;
-    border-radius: 100px;
+  display: inline-block;
 
-    background-color: #ffffff;
-    color: #000000;
-
+  transition: all 0.2s;
+  border-radius: 100px;
+}
+.btn-tons {
+  background-color: #018465;
+  color: #f9f9f9;
+  margin: 2px;
+}
+.btn-clear {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 1px black;
+}
+.btn-footer {
+  margin-inline: 10px;
 }
 .text-box {
-    display: flex;
-    justify-content: right;
+  display: flex;
+  justify-content: right;
 }
-.btn-home {
-    padding: 10px;
-    margin: 5px;
+.ver-home {
+  display: flex;
+  justify-content: space-between;
 }
-.btn-white {
-    margin-bottom: 20px;
-    padding: 40px;
-}
-.btn-braco {
-
-    padding: 30px;
-    margin: 5px;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn-return{
-    padding-inline: 10px;
-}
-
-.btn-ver-tons {
-    background-color: #56a3de;
-    color: #56a3de;
-    border: none;
-    min-width: 150px;
-    
-}
-.ver-home{
-    display: flex;
-    justify-content: space-between;
-}
-
-
 #botoes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#botoes-sei {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
 }

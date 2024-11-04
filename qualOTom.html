@@ -1,105 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Descobrir Tom</title>
-        <link rel="stylesheet" href="./styles/buttons.css" />
-        <link rel="stylesheet" href="./styles/default.css" />
-        <link rel="stylesheet" href="./styles/tom.css" />
-    </head>
-    <body>
-        <div class="results">
-        <h1 id="possiveis">Digite para ver o Tom.</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descobrir Tom</title>
+    <link rel="stylesheet" href="./styles/buttons.css" />
+    <link rel="stylesheet" href="./styles/default.css" />
+    <link rel="stylesheet" href="./styles/tom.css" />
+  </head>
+  <body>
+    <p class="header">Qual tom esta o louvor?</p>
+    <div class="results">
+      <h2 id="possiveis">Digite para ver o Tom.</h2>
+    </div>
 
-        </div>
-        
-       
+    <div id="botoes">
+      <button class="btn btn-tons" id="notasBtnA" onclick="mudacor('a')">
+        A
+      </button>
+      <button class="btn btn-tons" id="notasBtnAsus" onclick="mudacor('a#')">
+        A#
+      </button>
+      <button class="btn btn-tons" id="notasBtnB" onclick="mudacor('b')">
+        B
+      </button>
+      <button class="btn btn-tons" id="notasBtnC" onclick="mudacor('c')">
+        C
+      </button>
+      <button class="btn btn-tons" id="notasBtnCsus" onclick="mudacor('c#')">
+        C#
+      </button>
+      <button class="btn btn-tons" id="notasBtnD" onclick="mudacor('d')">
+        D
+      </button>
+      <button class="btn btn-tons" id="notasBtnDsus" onclick="mudacor('d#')">
+        D#
+      </button>
+      <button class="btn btn-tons" id="notasBtnE" onclick="mudacor('e')">
+        E
+      </button>
+      <button class="btn btn-tons" id="notasBtnF" onclick="mudacor('f')">
+        F
+      </button>
+      <button class="btn btn-tons" id="notasBtnFsus" onclick="mudacor('f#')">
+        F#
+      </button>
+      <button class="btn btn-tons" id="notasBtnG" onclick="mudacor('g')">
+        G
+      </button>
+      <button class="btn btn-tons" id="notasBtnGsus" onclick="mudacor('g#')">
+        G#
+      </button>
+      <button class="btn btn-clear">Clear</button>
+    </div>
 
-        <div id="botoes">
-            <button class="btn btn-home" id="notasBtnA" onclick="mudacor('a')">
-                A
-            </button>
-            <button
-                class="btn btn-home"
-                id="notasBtnAsus"
-                onclick="mudacor('a#')"
-            >
-                A#
-            </button>
-            <button class="btn btn-home" id="notasBtnB" onclick="mudacor('b')">
-                B
-            </button>
-            <button class="btn btn-home" id="notasBtnC" onclick="mudacor('c')">
-                C
-            </button>
-            <button
-                class="btn btn-home"
-                id="notasBtnCsus"
-                onclick="mudacor('c#')"
-            >
-                C#
-            </button>
-            <button class="btn btn-home" id="notasBtnD" onclick="mudacor('d')">
-                D
-            </button>
-            <button
-                class="btn btn-home"
-                id="notasBtnDsus"
-                onclick="mudacor('d#')"
-            >
-                D#
-            </button>
-            <button class="btn btn-home" id="notasBtnE" onclick="mudacor('e')">
-                E
-            </button>
-            <button class="btn btn-home" id="notasBtnF" onclick="mudacor('f')">
-                F
-            </button>
-            <button
-                class="btn btn-home"
-                id="notasBtnFsus"
-                onclick="mudacor('f#')"
-            >
-                F#
-            </button>
-            <button class="btn btn-home" id="notasBtnG" onclick="mudacor('g')">
-                G
-            </button>
-            <button class="btn btn-home" id="notasBtnGsus" onclick="mudacor('g#')">
-                G#
-            </button>
-        </div>       
-        <div class="ver-home">
-            <a href="./home.html" class="btn btn-home">Home</a>
+    <div class="footer">
+      <button onclick="verTons()" id="verBtn" class="btn btn-footer">
+        Ver
+      </button>
 
-            <button onclick="verTons()" class="btn btn-home btn-ver-tons">Ver</button>       
-        </div>
-        <h1>Sugestões:</h1>
-        <h1 id="sugestoes">digite um tom</h1>
-        <h1>--------------</h1>
-        <h1>Escalas Completas:</h1>
-        <h1 id="escalaCompleta"></h1>
-     
+      <a href="./home.html" class="btn-home btn-footer">Home</a>
+      <a href="./braco.html" class="btn btn-footer"> Braço</a>
+    </div>
+    <!-- 
+    <h1>Sugestões:</h1>
+    <p id="sugestoes">digite um tom</p>
+    <h1>--------------</h1>
+    <h3>Escalas Completas:</h3>
+    <p id="escalaCompleta"></p> -->
 
-        <script src="./scripts/qualOTom.js"></script>
-        <script>
-            function aoMudarResolucao() {
-                let largura = window.innerWidth;
-                let altura = window.innerHeight;
-
-                console.log('A nova resolução é: ${largura}x${altura}');
-
-                if (largura > altura) {
-                    window.location.href = "braco.html";
-                }
-            }
-
-            // Adiciona o listener para o evento de redimensionamento
-            window.addEventListener("resize", aoMudarResolucao);
-
-
-
-        </script>
-    </body>
+    <script src="./scripts/qualOTom.js"></script>
+  </body>
 </html>

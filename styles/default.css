@@ -1,44 +1,54 @@
 * {
-    text-align: center;
-    font-size: 40px;
+  text-align: center;
+  font-size: 40px;
 
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    background-color: #56a3de;
-    color: white;
+  background-color: #f9f9f9;
+  color: black;
 }
 
 #notas {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
-p{
-    font-size: 30px;
-}
-
-#possiveis{
-    margin: 30px    ;
+p {
+  font-size: 30px;
 }
 
-.header{
-    margin: 10px;
+#possiveis {
+  margin: 30px;
 }
 
-.braco{
-    margin: 0
-    ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100vw;
-
-    overflow: hidden;
+.header {
+  justify-content: left;
 }
 
-.results{
-    min-height: 20vh;
+.braco {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+
+  overflow: hidden;
+}
+
+.results {
+  min-height: 20vh;
+}
+
+.footer {
+  display: inline-flex;
+  background: #ffffff;
+  box-shadow: 10px 10px 10px 5px black;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
