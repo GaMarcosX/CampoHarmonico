@@ -8,34 +8,30 @@
         <link rel="stylesheet" href="./styles/default.css" />
     </head>
     <body>
+        <div id="bassimg">
+            <img src="./assets/bassimg.jpg" alt="" />
+          </div>
+      
         <div class="header">
-
         <h1>O que deseja fazer?</h1>
-    </div>
-        <div class="text-box"></div>
-            <a href="./qualOTom.html" class="btn btn-tons"
-                >Descobrir Tom</a
-            > <a href="./seiOTom.html" class="btn btn-tons"
-            >Notas do Tom</a
-        > <a href="./braco.html" class="btn btn-tons"
-        >Braço do Baixo</a>
         </div>
 
-        <script>
-            function aoMudarResolucao() {
-                let largura = window.innerWidth;
-                let altura = window.innerHeight;
+        <div class="btns-home">
+        <a href="./qualOTom.html"class="btn-img"
+        >Qual é o tom?</a> 
+        <a href="./seiOTom.html" class="btn-img"
+        >Notas do Tom</a> 
 
-                console.log(`A nova resolução é: ${largura}x${altura}`);
+        </div>
+        </div>
 
-                // Verifica se a resolução é 780x360
-                if (largura > altura) {
-                    window.location.href = "braco.html";
-                }
-            }
+        <div class="footer">
+            <a href="./home.html" class="btn-footer">Home</a>
+            <button onclick="braco()" class="btn btn-footer">Braço</button>
+          </div>
 
-            // Adiciona o listener para o evento de redimensionamento
-            window.addEventListener("resize", aoMudarResolucao);
+        <script src="./scripts/qualOTom.js">
+           
         </script>
     </body>
 </html>

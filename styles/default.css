@@ -1,6 +1,5 @@
 * {
   text-align: center;
-  font-size: 40px;
 
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
@@ -11,39 +10,34 @@
   background-color: #f9f9f9;
   color: black;
 }
-
 #notas {
   text-transform: uppercase;
 }
 p {
   font-size: 30px;
 }
-
 #possiveis {
   margin: 30px;
 }
-
 .header {
   justify-content: left;
 }
-
-.braco {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+#bassimg {
+  display: block;
+  position: absolute;
   width: 100vw;
-
-  overflow: hidden;
+  height: 100vh;
+  display: none;
 }
-
 .results {
   min-height: 20vh;
 }
-
 .footer {
   display: inline-flex;
+
+  align-items: center;
+  justify-content: space-between;
+
   background: #ffffff;
   box-shadow: 10px 10px 10px 5px black;
   width: 100%;

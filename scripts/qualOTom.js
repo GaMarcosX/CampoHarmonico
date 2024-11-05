@@ -13,9 +13,11 @@ const notasBtnGsus = document.getElementById("notasBtnGsus");
 const mostrarTonsValidos = document.getElementById("possiveis");
 const escalaCompleta = document.getElementById("escalaCompleta");
 const sugestoes = document.getElementById("sugestoes");
+const bassimg = document.getElementById("bassimg");
 
 let notasSelecionadas = [];
 let tonsValidos = [];
+let showbass = ["a"];
 const notasBtnMap = {
   a: notasBtnA,
   "a#": notasBtnAsus,
@@ -59,11 +61,29 @@ const mudacor = (nota) => {
     notasBtnMap[nota].style.backgroundColor = "#018465";
   } else {
     notasSelecionadas.push(nota);
-    notasBtnMap[nota].style.backgroundColor = "#013425";
+    notasBtnMap[nota].style.backgroundColor = "#003827";
   }
   possiveis(tons);
 };
+const clearbtn = () => {
+  sugestoes.innerHTML = "Digite um tom";
+  mostrarTonsValidos.innerHTML = "Digite para ver o Tom";
+  notasBtnA.style.backgroundColor = "#018465";
+  notasBtnAsus.style.backgroundColor = "#018465";
+  notasBtnB.style.backgroundColor = "#018465";
+  notasBtnC.style.backgroundColor = "#018465";
+  notasBtnCsus.style.backgroundColor = "#018465";
+  notasBtnD.style.backgroundColor = "#018465";
+  notasBtnDsus.style.backgroundColor = "#018465";
+  notasBtnE.style.backgroundColor = "#018465";
+  notasBtnF.style.backgroundColor = "#018465";
+  notasBtnFsus.style.backgroundColor = "#018465";
+  notasBtnG.style.backgroundColor = "#018465";
+  notasBtnGsus.style.backgroundColor = "#018465";
 
+  // Limpa a lista de notas selecionadas
+  notasSelecionadas = [];
+};
 const tomRepresentacao = (tom) => {
   switch (tom) {
     case "Csharp":
@@ -80,7 +100,6 @@ const tomRepresentacao = (tom) => {
       return tom; // Retorna o tom como está se não for sustenido
   }
 };
-
 const possiveis = (tons) => {
   escalaCompleta.innerHTML = "";
   tonsValidos = [];
@@ -103,21 +122,11 @@ const possiveis = (tons) => {
     mostrarTonsValidos.innerHTML = "Digite para ver o Tom";
   }
 
-  const btnVerTons = document.querySelector(".btn-ver-tons");
-  if (tonsValidos.length <= 8) {
-    btnVerTons.style.backgroundColor = "white";
-    btnVerTons.style.color = "black";
-  } else {
-    btnVerTons.style.backgroundColor = "red";
-    btnVerTons.style.color = "black";
-    document.getElementById("verBtn").disabled = true;
-  }
-
   // Chama a função para mostrar as diferenças entre os tons
-  mostrarDiferencasEntreTons();
+  btnsugestoes();
 };
 // Função para encontrar notas que diferenciam os tons válidos
-const mostrarDiferencasEntreTons = () => {
+const btnsugestoes = () => {
   sugestoes.innerHTML = "";
   let notasDiferentes = [];
 
@@ -141,7 +150,7 @@ const mostrarDiferencasEntreTons = () => {
     }
   });
 
-  // Formata a exibição das diferenças para o `h1` sugestões
+  // Formata a exibição das diferenças para o `p` sugestões
   sugestoes.innerHTML =
     notasDiferentes
       .map((dif) => {
@@ -149,7 +158,21 @@ const mostrarDiferencasEntreTons = () => {
       })
       .join(" | ") || "Sem sugestões";
 };
+const braco = () => {
+  if (showbass == "b") {
+    bassimg.style.display = "none";
+    showbass = [];
+    showbass.push("a");
+    console.log(showbass);
+  } else if (showbass == "a") {
+    bassimg.style.display = "block";
+    showbass = [];
+    showbass.push("b");
+    console.log(showbass);
+  }
+};
 
+//! desativados:
 const verTons = () => {
   escalaCompleta.innerHTML = "";
 

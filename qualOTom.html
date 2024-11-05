@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="./styles/tom.css" />
   </head>
   <body>
+    <div id="bassimg">
+      <img src="./assets/bassimg.jpg" alt="" />
+    </div>
+
     <p class="header">Qual tom esta o louvor?</p>
     <div class="results">
-      <h2 id="possiveis">Digite para ver o Tom.</h2>
+      <h1 id="possiveis">Digite para ver o Tom</h1>
     </div>
 
     <div id="botoes">
@@ -51,23 +55,18 @@
       <button class="btn btn-tons" id="notasBtnGsus" onclick="mudacor('g#')">
         G#
       </button>
-      <button class="btn btn-clear">Clear</button>
+      <button class="btn btn-clear" onclick="clearbtn()">Clear</button>
     </div>
 
     <div class="footer">
-      <button onclick="verTons()" id="verBtn" class="btn btn-footer">
-        Ver
-      </button>
-
-      <a href="./home.html" class="btn-home btn-footer">Home</a>
-      <a href="./braco.html" class="btn btn-footer"> Braço</a>
+      <a href="./home.html" class="btn-footer">Home</a>
+      <button onclick="braco()" class="btn btn-footer">Braço</button>
     </div>
-    <!-- 
+
     <h1>Sugestões:</h1>
-    <p id="sugestoes">digite um tom</p>
-    <h1>--------------</h1>
-    <h3>Escalas Completas:</h3>
-    <p id="escalaCompleta"></p> -->
+    <p id="sugestoes">Digite um tom</p>
+
+    <p id="escalaCompleta"></p>
 
     <script src="./scripts/qualOTom.js"></script>
   </body>
