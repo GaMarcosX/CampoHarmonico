@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/buttons.css" />
-        <link rel="stylesheet" href="./styles/default.css" />
-        <link rel="stylesheet" href="./styles/tom.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/buttons.css" />
+    <link rel="stylesheet" href="./styles/default.css" />
 
-        <title>Ja sei o Tom</title>
-    </head>
-    <body>
+    <title>Ja sei o Tom</title>
+  </head>
+  <body>
+    <h1>Qual o seiOTom?</h1>
+    <div class="results">
+      <pp id="mostrarNotas">...</p>
+    </div>
 
+      <div id="botoes-sei">
 
-    
-        <h1>Qual o tom?</h1>
-        <h1 id="mostrarNotas">...</h2>
+      <button class="btn btn-tons" id="notasBtnA" onclick="mudacor('a'), seiOTom('a')">A/F#m</button>
+      <button class="btn btn-tons" id="notasBtnAsus" onclick="mudacor('a#'),seiOTom('asus')">A#/Gm</button>
+  
+      <button class="btn btn-tons" id="notasBtnB" onclick="mudacor('b'), seiOTom('b')">B/G#m</button>
 
-        <div id="botoes-sei">
-            <button class="btn btn-tons" onclick="tom('c')">C/Am</button>
-            <button class="btn btn-tons" onclick="tom('csus')">C#/A#m</button>
+      <button class="btn btn-tons" id="notasBtnC" onclick="mudacor('c'), seiOTom('c')">C/Am</button>
+      <button class="btn btn-tons" id="notasBtnCsus"onclick="mudacor('c#'),seiOTom('csus')">C#/A#m</button>
 
-            <button class="btn btn-tons" onclick="tom('d')">D/Bm</button>
-            <button class="btn btn-tons" onclick="tom('dsus')">D#/Cm</button>
+      <button class="btn btn-tons" id="notasBtnD" onclick="mudacor('d'), seiOTom('d')">D/Bm</button>
+      <button class="btn btn-tons" id="notasBtnDsus" onclick="mudacor('d#'),seiOTom('dsus')">D#/Cm</button>
 
-            <button class="btn btn-tons" onclick="tom('e')">E/C#m</button>
+      <button class="btn btn-tons" id="notasBtnE" onclick="mudacor('e'), seiOTom('e')">E/C#m</button>
 
-            <button class="btn btn-tons" onclick="tom('f')">F/Dm</button>
-            <button class="btn btn-tons" onclick="tom('fsus')">F#/D#m</button>
+      <button class="btn btn-tons" id="notasBtnF" onclick="mudacor('f'), seiOTom('f')">F/Dm</button>
+      <button class="btn btn-tons" id="notasBtnFsus" onclick="mudacor('f#'),seiOTom('fsus')">F#/D#m</button>
 
-            <button class="btn btn-tons" onclick="tom('g')">G/Em</button>
-            <button class="btn btn-tons" onclick="tom('gsus')">G#/Fm</button>
+      <button class="btn btn-tons" id="notasBtnG" onclick="mudacor('g'), seiOTom('g')">G/Em</button>
+      <button class="btn btn-tons" id="notasBtnGsus" onclick="mudacor('g#'),seiOTom('gsus')">G#/Fm</button>
+        
+    </div>
+    <div class="footer">
+      <a href="./qualOTom.html" class="btn-footer"
+        ><ion-icon name="help-outline"></ion-icon>
+      </a>
+      <a href="./home.html" class="btn-footer"
+        ><ion-icon name="home-outline"></ion-icon>
+      </a>
+      <button onclick="braco()" class="btn-footer">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+    </div>
 
-            <button class="btn btn-tons" onclick="tom('a')">A/F#m</button>
-            <button class="btn btn-tons" onclick="tom('asus')">A#/Gm</button>
-
-            <button class="btn btn-tons" onclick="tom('b')">B/G#m</button>
-        </div>
-
-        <div class="text-box">
-            <a href="./home.html" class="btn btn-return">Home</a>
-        </div>
-        <script src="./scripts/seiOTom.js"></script>
-        <script>            function aoMudarResolucao() {
-            let largura = window.innerWidth;
-            let altura = window.innerHeight;
-
-            console.log(`A nova resolução é: ${largura}x${altura}`);
-
-            // Verifica se a resolução é 780x360
-            if (largura > altura) {
-                window.location.href = "braco.html";
-            }
-        }
-
-        // Adiciona o listener para o evento de redimensionamento
-        window.addEventListener("resize", aoMudarResolucao);
-        </script>
-    </body>
+    <script src="./scripts/tons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

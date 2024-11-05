@@ -32,7 +32,6 @@ const notasBtnMap = {
   g: notasBtnG,
   "g#": notasBtnGsus,
 };
-
 const tons = {
   C: ["c", "d", "e", "f", "g", "a", "b"],
   Csharp: ["c#", "d#", "e#", "f#", "g#", "a#", "b"],
@@ -63,10 +62,8 @@ const mudacor = (nota) => {
     notasSelecionadas.push(nota);
     notasBtnMap[nota].style.backgroundColor = "#003827";
   }
-  possiveis(tons);
 };
 const clearbtn = () => {
-  sugestoes.innerHTML = "Digite um tom";
   mostrarTonsValidos.innerHTML = "Digite para ver o Tom";
   notasBtnA.style.backgroundColor = "#018465";
   notasBtnAsus.style.backgroundColor = "#018465";
@@ -157,6 +154,10 @@ const btnsugestoes = () => {
         return ` ${dif.nota}`.toUpperCase();
       })
       .join(" | ") || "Sem sugestões";
+
+  if (sugestoes.innerHTML.length > 20) {
+    sugestoes.innerHTML = "Sem sugestões";
+  }
 };
 const braco = () => {
   if (showbass == "b") {
@@ -172,34 +173,79 @@ const braco = () => {
   }
 };
 
-//! desativados:
-const verTons = () => {
-  escalaCompleta.innerHTML = "";
+const seiOTom = (nota) => {
+  if (nota == "c") {
+    mostrarNotas.innerHTML = "C |  D  |  E |  F |  G  | A  | B | C";
+  }
+  if (nota == "csus") {
+    mostrarNotas.innerHTML = "C# |  D# |  E |  F# |  G#  | A#  | B | C#";
+  }
 
-  if (tonsValidos.length < 100) {
-    tonsValidos.forEach((tom) => {
-      const escalaInteira = tons[tom].map((n) => n).join(", ");
-      // Mapeando os nomes dos tons para a representação desejada
-      const tomRepresentacao = (tom) => {
-        switch (tom) {
-          case "Csharp":
-            return "C#";
-          case "Dsharp":
-            return "D#";
-          case "Fsharp":
-            return "F#";
-          case "Gsharp":
-            return "G#";
-          case "Asharp":
-            return "A#";
-          default:
-            return tom; // Retorna o tom como está se não for sustenido
-        }
-      };
-      console.log(`${tomRepresentacao(tom)}: ${escalaInteira}`);
-      escalaCompleta.innerHTML += `<p>${tomRepresentacao(
-        tom
-      )}: ${escalaInteira.toUpperCase()}</p>`;
-    });
+  if (nota == "d") {
+    mostrarNotas.innerHTML = "D | E | F# | G | A | B | C# | D";
+  }
+  if (nota == "dsus") {
+    mostrarNotas.innerHTML = "  D#  |  F |  G |  G# | A# | C | E | D#";
+  }
+
+  if (nota == "e") {
+    mostrarNotas.innerHTML = "E | F# | G# | A | B | C# | D# | E";
+  }
+
+  if (nota == "f") {
+    mostrarNotas.innerHTML = "F | G | A | Bb | C | D | E | F";
+  }
+  if (nota == "fsus") {
+    mostrarNotas.innerHTML = "F# | G# | A# | B | C# | D# | F | F#";
+  }
+
+  if (nota == "g") {
+    mostrarNotas.innerHTML = "G | A | B | C | D | E | F# | G";
+  }
+  if (nota == "gsus") {
+    mostrarNotas.innerHTML = "G# | A# | C | C# | D# | F | G | G#";
+  }
+
+  if (nota == "a") {
+    mostrarNotas.innerHTML = "A | B | C# | D | E | F# | G# | A ";
+  }
+  if (nota == "asus") {
+    mostrarNotas.innerHTML = "A# | C | D | D# | F | G | A | A#";
+  }
+
+  if (nota == "b") {
+    mostrarNotas.innerHTML = "B , C# , D# , E , F# , G# , A#";
   }
 };
+
+//! desativados:
+// const verTons = () => {
+//   escalaCompleta.innerHTML = "";
+
+//   if (tonsValidos.length < 100) {
+//     tonsValidos.forEach((tom) => {
+//       const escalaInteira = tons[tom].map((n) => n).join(", ");
+//       // Mapeando os nomes dos tons para a representação desejada
+//       const tomRepresentacao = (tom) => {
+//         switch (tom) {
+//           case "Csharp":
+//             return "C#";
+//           case "Dsharp":
+//             return "D#";
+//           case "Fsharp":
+//             return "F#";
+//           case "Gsharp":
+//             return "G#";
+//           case "Asharp":
+//             return "A#";
+//           default:
+//             return tom; // Retorna o tom como está se não for sustenido
+//         }
+//       };
+//       console.log(`${tomRepresentacao(tom)}: ${escalaInteira}`);
+//       escalaCompleta.innerHTML += `<p>${tomRepresentacao(
+//         tom
+//       )}: ${escalaInteira.toUpperCase()}</p>`;
+//     });
+//   }
+// };

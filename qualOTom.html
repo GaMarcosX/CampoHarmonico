@@ -6,7 +6,6 @@
     <title>Descobrir Tom</title>
     <link rel="stylesheet" href="./styles/buttons.css" />
     <link rel="stylesheet" href="./styles/default.css" />
-    <link rel="stylesheet" href="./styles/tom.css" />
   </head>
   <body>
     <div id="bassimg">
@@ -19,55 +18,119 @@
     </div>
 
     <div id="botoes">
-      <button class="btn btn-tons" id="notasBtnA" onclick="mudacor('a')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnA"
+        onclick="mudacor('a'), possiveis(tons);"
+      >
         A
       </button>
-      <button class="btn btn-tons" id="notasBtnAsus" onclick="mudacor('a#')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnAsus"
+        onclick="mudacor('a#'), possiveis(tons)"
+      >
         A#
       </button>
-      <button class="btn btn-tons" id="notasBtnB" onclick="mudacor('b')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnB"
+        onclick="mudacor('b'), 
+      possiveis(tons)"
+      >
         B
       </button>
-      <button class="btn btn-tons" id="notasBtnC" onclick="mudacor('c')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnC"
+        onclick="mudacor('c'), possiveis(tons)"
+      >
         C
       </button>
-      <button class="btn btn-tons" id="notasBtnCsus" onclick="mudacor('c#')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnCsus"
+        onclick="mudacor('c#'), possiveis(tons)"
+      >
         C#
       </button>
-      <button class="btn btn-tons" id="notasBtnD" onclick="mudacor('d')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnD"
+        onclick="mudacor('d'), possiveis(tons)"
+      >
         D
       </button>
-      <button class="btn btn-tons" id="notasBtnDsus" onclick="mudacor('d#')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnDsus"
+        onclick="mudacor('d#'), possiveis(tons)"
+      >
         D#
       </button>
-      <button class="btn btn-tons" id="notasBtnE" onclick="mudacor('e')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnE"
+        onclick="mudacor('e'), possiveis(tons)"
+      >
         E
       </button>
-      <button class="btn btn-tons" id="notasBtnF" onclick="mudacor('f')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnF"
+        onclick="mudacor('f'), possiveis(tons)"
+      >
         F
       </button>
-      <button class="btn btn-tons" id="notasBtnFsus" onclick="mudacor('f#')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnFsus"
+        onclick="mudacor('f#'), possiveis(tons)"
+      >
         F#
       </button>
-      <button class="btn btn-tons" id="notasBtnG" onclick="mudacor('g')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnG"
+        onclick="mudacor('g'), possiveis(tons)"
+      >
         G
       </button>
-      <button class="btn btn-tons" id="notasBtnGsus" onclick="mudacor('g#')">
+      <button
+        class="btn btn-tons"
+        id="notasBtnGsus"
+        onclick="mudacor('g#'), possiveis(tons)"
+      >
         G#
       </button>
       <button class="btn btn-clear" onclick="clearbtn()">Clear</button>
     </div>
 
     <div class="footer">
-      <a href="./home.html" class="btn-footer">Home</a>
-      <button onclick="braco()" class="btn btn-footer">Braço</button>
+      <a href="./seiOTom.html" class="btn-footer"
+        ><ion-icon name="help-outline"></ion-icon>
+      </a>
+      <a href="./home.html" class="btn-footer"
+        ><ion-icon name="home-outline"></ion-icon>
+      </a>
+      <button onclick="braco()" class="btn-footer">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
     </div>
 
-    <h1>Sugestões:</h1>
+    <p>Sugestões:</p>
     <p id="sugestoes">Digite um tom</p>
 
     <p id="escalaCompleta"></p>
 
-    <script src="./scripts/qualOTom.js"></script>
+    <script src="./scripts/tons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

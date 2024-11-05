@@ -8,6 +8,8 @@
 #botoes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 90vw;
+  margin-inline: auto;
 }
 .btn-tons {
   background-color: #018465;
@@ -15,50 +17,62 @@
   margin: 2px;
 }
 .btn-clear {
-  background-color: #ffffff;
+  background-color: (#f9f9f9);
   box-shadow: 1px 1px 1px black;
+
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.btn-clear:active {
+  transform: scale(0.95);
 }
 .btn-footer {
+  text-decoration: none;
+  border: none;
+  background: none;
+
+  display: inline-flex;
+
+  margin-inline: 40px;
+
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
 }
-
 .btns-home {
+  margin-top: 8%;
+
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 
-  border: 1px solid red;
+  border: 1px dashed grey;
 
   width: 100vw;
-  height: 40vh;
+  height: 45vh;
 }
-
 .btn-img {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 5px rgb(179, 179, 179);
+
   display: flex;
   justify-content: left;
 
   align-items: center;
 
-  margin-top: 10px;
   margin-inline: auto;
 
   width: 90vw;
   height: 40vw;
 
-  border: 1px dashed red;
   border-radius: 16px;
 }
 .btn-text {
-  background-color: red;
+  background-color: #ffffff;
   margin-left: 10px;
 }
-
 .ver-home {
   display: flex;
   justify-content: space-between;
 }
-
 #botoes-sei {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
