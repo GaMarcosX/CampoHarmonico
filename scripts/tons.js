@@ -14,6 +14,7 @@ const mostrarTonsValidos = document.getElementById("possiveis");
 const escalaCompleta = document.getElementById("escalaCompleta");
 const sugestoes = document.getElementById("sugestoes");
 const bassimg = document.getElementById("bassimg");
+const hideicon = document.getElementById("hideIcon");
 
 let notasSelecionadas = [];
 let tonsValidos = [];
@@ -162,17 +163,16 @@ const btnsugestoes = () => {
 const braco = () => {
   if (showbass == "b") {
     bassimg.style.display = "none";
+
     showbass = [];
     showbass.push("a");
-    console.log(showbass);
   } else if (showbass == "a") {
     bassimg.style.display = "block";
+
     showbass = [];
     showbass.push("b");
-    console.log(showbass);
   }
 };
-
 const seiOTom = (nota) => {
   if (nota == "c") {
     mostrarNotas.innerHTML = "C |  D  |  E |  F |  G  | A  | B | C";
@@ -249,3 +249,20 @@ const seiOTom = (nota) => {
 //     });
 //   }
 // };
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+}
+
+document.addEventListener("fullscreenchange", () => {
+  const button = document.querySelector(".fab");
+  if (!document.fullscreenElement) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+});

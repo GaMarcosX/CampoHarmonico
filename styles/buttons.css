@@ -25,6 +25,7 @@
   background-color: #018465;
   color: #f9f9f9;
   margin: 2px;
+  min-height: 10px;
 }
 .btn-clear {
   background-color: (#f9f9f9);
